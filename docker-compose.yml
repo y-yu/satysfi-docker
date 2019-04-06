@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  satysfi:
+    image: yyupw/satysfi-docker:latest
+    build:
+      context: .
+      cache_from:
+        - yyupw/satysfi-docker:latest
+  build-demo-travis:
+    image: yyupw/satysfi-docker:latest
+    volumes:
+       - ./SATySFi/demo:/workdir
+    entrypoint:
+       - satysfi
+       - demo.saty
