@@ -15,5 +15,7 @@ How to use
 ----------
 
 ```
-$ docker run --rm -v $(pwd):/home/opam/satysfi amutake/satysfi satysfi demo.saty
+$ docker-compose pull
+$ git clone https://github.com/gfngfn/SATySFi.git
+$ docker-compose up build-demo-travis
 ```
